@@ -1,0 +1,14 @@
+import sys
+
+def sum_of_multiples(n, divisor):
+    p = (n - 1) // divisor
+    return divisor * (p * (p + 1)) // 2
+
+t = int(sys.stdin.readline().strip())
+for _ in range(t):
+    n = int(sys.stdin.readline().strip())
+    sum_of_3 = sum_of_multiples(n, 3)
+    sum_of_5 = sum_of_multiples(n, 5)
+    sum_of_15 = sum_of_multiples(n, 15)
+    total_sum = sum_of_3 + sum_of_5 - sum_of_15
+    print(total_sum)
